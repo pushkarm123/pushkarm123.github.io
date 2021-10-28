@@ -39,6 +39,7 @@ Email: <input name="email" required="" size="75" type="email"/>
     var form = e.target; 
     var email = form["email"].value; 
     var fullname = form["fullname"].value; 
+    var shoeType = form["shoeType"].value;
     var user = { 
       email: email, 
       name: fullname
@@ -46,7 +47,8 @@ Email: <input name="email" required="" size="75" type="email"/>
     // Identify call
     analytics.identify('12345', { 
       email: email, 
-      name: fullname 
+      name: fullname,
+      shoeType: shoeType
     }); 
     // Sign-up Track call
     analytics.track('user signed up', user, function() { 
