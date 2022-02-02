@@ -45,7 +45,7 @@ Email: <input name="email" required="" size="75" type="email"/>
       name: fullname
     }; 
     // Identify call
-    var id = Math.random();
+    var id = Math.floor(Math.random() * 10);
     analytics.identify(id.toString(), { 
       email: email, 
       name: fullname,
